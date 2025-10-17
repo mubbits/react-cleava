@@ -113,11 +113,12 @@ export const allLanguages = {
                 button: "OTA YHTEYTTÄ",
             },
             section1: {
-                title: "Meidän tarinamme – miten kaikki alkoi",
+                title: "Kapina Kaaosta Vastaan",
                 paragraphs: [
-                    "Cleava syntyi yksinkertaisesta ajatuksesta: jokainen koti ja työtila ansaitsee tulla huolletuksi yhtä suurella huolella kuin sen asukkaat tai työntekijät ansaitsevat tulla kohdelluiksi. Lähtökohtamme oli tuoda markkinoille siivouspalvelu, joka on yhtä aikaa inhimillinen, vastuullinen ja tinkimättömän laadukas.",
-                    "Alusta asti tavoitteenamme on ollut rakentaa yritys, jossa ammattitaito yhdistyy aidosti välittävään palveluasenteeseen. Cleava ei ole vain siivousyritys – se on yhteisö, jossa arvostetaan puhtautta, luotettavuutta ja hyvää arkea.",
-                    "Vuosien varrella olemme kasvaneet pienestä paikallisesta toimijasta luotetuksi siivouskumppaniksi sadoille kotitalouksille ja yrityksille. Olemme ylpeitä siitä, että asiakkaamme pysyvät kanssamme – ei vain palvelun, vaan luottamuksen vuoksi.",
+                    "Helsingin ytimessä, perustajamme Nastiaa tunsi kiireisen nykyelämän hiljaisen paineen. Se ei ollut pelkkää pölyä; se oli koko maailman paino painautumassa hänen kotiinsa. Kodista, jonka piti olla hänen turvapaikkansa, oli tullut piilotetun ahdistuksen lähde – jatkuva, uuvuttava muistutus tekemättömistä asioista.",
+                    "Se johti hetkeen, jolloin hän tunsi syvää uupumusta, tajuten, että sekasorto ei ollut vain lattialla, vaan myös hänen päässään.",
+                    "Tämä käännekohta sai aikaan päätöksen: hiljainen, voimakas kapina kaaosta vastaan. Nastiaa ymmärsi, että siivouksen ei pitäisi olla vaiva, vaan huolellinen palautus – rituaali, joka palauttaa kirkkaan selkeyden ja vaivattoman hallinnan.",
+                    "Tämä intensiivinen, henkilökohtainen tarve todella pyhälle tilalle on syy siihen, miksi Cleava syntyi. Me emme vain siivoa; toimitamme emotionaalista ja henkistä vapautta, jota tarvitset aikasi takaisinottamiseen ja kukoistamiseen pohjoisessa valossa."
                 ],
             },
             section2: {
@@ -231,8 +232,10 @@ export const allLanguages = {
             },
         },
         movingCleaning: {
-            movingCleaningHero: '"Luotettava muuttosiivous– huoleton alku uuteen kotiin"',
-            movingCleaningDesc: 'Manoelan muuttosiivouspalvelu tarjoaa stressittömän alun elämänmuutokseesi. Muuttosiivous vaatii erityistä huolellisuutta ja perusteellisuutta, sillä se ei ole vain kotiin jäävän asukkaan etu, vaan myös uuden asukkaan toivoma puhdas tila. Kokeneet siivoojamme varmistavat, että kaikki pinnat, nurkat ja yksityiskohdat puhdistetaan tarkasti ja ammattimaisesti, jättäen tilan raikkaaksi ja edustuskelpoiseksi.',
+            movingCleaningHero:
+                '"Luotettava muuttosiivous– huoleton alku uuteen kotiin"',
+            movingCleaningDesc:
+                "Manoelan muuttosiivouspalvelu tarjoaa stressittömän alun elämänmuutokseesi. Muuttosiivous vaatii erityistä huolellisuutta ja perusteellisuutta, sillä se ei ole vain kotiin jäävän asukkaan etu, vaan myös uuden asukkaan toivoma puhdas tila. Kokeneet siivoojamme varmistavat, että kaikki pinnat, nurkat ja yksityiskohdat puhdistetaan tarkasti ja ammattimaisesti, jättäen tilan raikkaaksi ja edustuskelpoiseksi.",
             serviceTransitionSection: {
                 title: "Kattava muuttosiivous sujuvaan siirtymään",
                 desc: `Tarjoamme ammattitaitoista ja huolellista muuttosiivouspalvelua,
@@ -293,8 +296,9 @@ export const allLanguages = {
                     desc: "Käytämme ympäristöystävällisiä puhdistusaineita ja -välineitä, jotka ovat turvallisia niin perheellesi kuin lemmikeillekin.",
                 },
             ],
-            pricingSectionTitle: 'Muuttohulinasta aina tupareihin asti',
-            pricingSectionDesc: 'Kun muutat, Cleava huolehtii siitä, että tilasi on tahraton ja viihtyisä. Asiantunteva kosketuksemme takaa tuoreen alun tai hellät jäähyväiset ja jättää kotisi moitteettoman puhtaaksi seuraavaa seikkailua varten.'
+            pricingSectionTitle: "Muuttohulinasta aina tupareihin asti",
+            pricingSectionDesc:
+                "Kun muutat, Cleava huolehtii siitä, että tilasi on tahraton ja viihtyisä. Asiantunteva kosketuksemme takaa tuoreen alun tai hellät jäähyväiset ja jättää kotisi moitteettoman puhtaaksi seuraavaa seikkailua varten.",
         },
         officeCleaning: {
             heroTitle: "Toimistosiivous Helsinki & Espoo",
@@ -326,9 +330,12 @@ export const allLanguages = {
                     desc: "Roska-astioiden tyhjennys ja kierrätyksen ylläpito varmistavat siistin ja vastuullisen työpaikan.",
                 },
             ],
-            pricingTitle: "Valmiina nostamaan työympäristösi uudelle tasolle? Pyydä tarjous toimistosiivouksesta jo tänään!",
-            pricingSubtitle: "Puhdas ja raikas toimisto lisää keskittymistä, motivaatiota ja viihtyvyyttä. Säännöllinen siivous ehkäisee sairastumisia ja edistää työntekijöiden hyvinvointia – sijoitus, joka maksaa itsensä takaisin joka päivä.",
-            pricingSubtitle1: "Anna Manoelan luoda työpaikallesi tilaa, jossa on helpompi hengittää ja menestyä!",
+            pricingTitle:
+                "Valmiina nostamaan työympäristösi uudelle tasolle? Pyydä tarjous toimistosiivouksesta jo tänään!",
+            pricingSubtitle:
+                "Puhdas ja raikas toimisto lisää keskittymistä, motivaatiota ja viihtyvyyttä. Säännöllinen siivous ehkäisee sairastumisia ja edistää työntekijöiden hyvinvointia – sijoitus, joka maksaa itsensä takaisin joka päivä.",
+            pricingSubtitle1:
+                "Anna Manoelan luoda työpaikallesi tilaa, jossa on helpompi hengittää ja menestyä!",
             pricePlans: [
                 {
                     title: "Joustavat viikoittaiset siivouspaketit",
@@ -383,9 +390,41 @@ export const allLanguages = {
             ],
         },
         menuTitle: "Palvelut",
-        homeCleaning: "Kotisiivous",
-        movingCleaning: "Muuttosiivous",
-        officeCleaning: "Toimistosiivous",
+        homeCleaningText: "Kotisiivous",
+        movingCleaningText: "Muuttosiivous",
+        officeCleaningText: "Toimistosiivous",
+        contactPage: {
+            title: "Ota yhteyttä",
+            subtitle:
+                "Täytä lomake huolellisesti, jotta voimme auttaa sinua mahdollisimman tehokkaasti. Tähtimerkillä (*) merkityt kentät ovat pakollisia.",
+            companyName: "CLEAVA",
+            fields: {
+                firstName: "Etunimi",
+                lastName: "Sukunimi",
+                email: "Sähköposti",
+                phone: "Matkapuhelinnumero",
+                selectService: "Valitse palvelu",
+                message: "Viesti",
+            },
+            options: {
+                consultation: "Konsultointi",
+                support: "Tuki",
+                other: "Muu",
+                choose: "Valitse",
+            },
+            privacyText1:
+                "Cleava sitoutuu suojaamaan yksityisyyttäsi ja käyttämään henkilötietojasi vain tilauksesi ja asiakkuutesi hoitamiseen. Ajoittain saatamme ottaa sinuun yhteyttä koskien käyttämiäsi palveluita sekä muita aiheita, jotka saattavat kiinnostaa sinua.",
+            privacyText2:
+                "Jos hyväksyt nämä viestit, valitse alla olevat vaihtoehdot.",
+
+            checkboxes: {
+                communication: "Hyväksyn yhteydenotot Cleavalta.",
+                dataConsent:
+                    "Hyväksyn, että Cleava tallentaa ja käsittelee henkilötietoni.",
+            },
+            recaptcha: "reCAPTCHA-paikkamerkki",
+            submitButton: "Lähetä",
+        },
     },
     en: {
         homePage: {
@@ -499,11 +538,12 @@ export const allLanguages = {
                 button: "CONTACT US",
             },
             section1: {
-                title: "Our Story – How It All Began",
+                title: "The Rebellion Against the Chaos",
                 paragraphs: [
-                    "Cleava was born from a simple idea: every home and workspace deserves to be cared for with the same dedication and respect that people deserve themselves. Our goal was to create a cleaning service that is both human-centered and uncompromising in quality.",
-                    "From the very beginning, we’ve aimed to build a company where professionalism meets genuine care. Cleava is more than a cleaning business – it’s a community built on cleanliness, reliability, and better everyday living.",
-                    "Over the years, we’ve grown from a small local team into a trusted cleaning partner for hundreds of homes and businesses. Our clients stay with us not just for the service – but because of the trust we build together.",
+                    "In the heart of Helsinki, our founder, Nastiaa, felt the silent pressure of a busy modern life. It wasn't just dust; it was the weight of the world pressing into her home. Her space, meant to be her sanctuary, had become a source of hidden anxiety—a constant, draining whisper of undone work.",
+                    "It led to a moment of soul-deep exhaustion, realizing the clutter wasn't just on the floor, but inside her head.",
+                    "This breaking point sparked a decision: a silent, powerful rebellion against the chaos. Nastiaa realized cleaning shouldn't be a chore, but a meticulous restoration—a ritual that brings back luminous clarity and effortless control.",
+                    "This intense, personal need for a truly sacred space is why Cleava was born. We don't just clean; we deliver the emotional and mental freedom you need to reclaim your time and thrive in the stillness of your Nordic light.",
                 ],
             },
             section2: {
@@ -616,8 +656,10 @@ export const allLanguages = {
             },
         },
         movingCleaning: {
-            movingCleaningHero: "Reliable Move-Out Cleaning – A Carefree Start in Your New Home",
-            movingCleaningDesc: "Manoela’s moving cleaning service offers a stress-free start to your new chapter. Move-out cleaning requires special attention and thoroughness — it’s not only for the benefit of the departing resident but also to provide a fresh, clean space for the new one. Our experienced cleaners ensure that every surface, corner, and detail is cleaned meticulously and professionally, leaving the space fresh and ready to welcome its next occupants.",
+            movingCleaningHero:
+                "Reliable Move-Out Cleaning – A Carefree Start in Your New Home",
+            movingCleaningDesc:
+                "Manoela’s moving cleaning service offers a stress-free start to your new chapter. Move-out cleaning requires special attention and thoroughness — it’s not only for the benefit of the departing resident but also to provide a fresh, clean space for the new one. Our experienced cleaners ensure that every surface, corner, and detail is cleaned meticulously and professionally, leaving the space fresh and ready to welcome its next occupants.",
             serviceTransitionSection: {
                 title: "Comprehensive Move-Out Cleaning for a Smooth Transition",
                 desc: "We provide professional and thorough move-out cleaning service that help you leave your old home spotless and ready for new residents. Our cleaning covers all key areas: we clean kitchen appliances, cabinets, and surfaces, sanitize bathrooms, vacuum and wash floors, wipe dust, and ensure windows shine when needed. We understand that a deep, floor-to-ceiling clean ensures the home looks its best and meets the expectations of landlords or buyers. With our experienced team and eco-friendly products, Cleava makes move-out cleaning effortless and efficient. Let us take care of the cleaning so you can focus on settling into your new home with peace of mind.",
@@ -668,7 +710,8 @@ export const allLanguages = {
                 },
             ],
             pricingSectionTitle: "From Moving Chaos to Housewarming Bliss",
-            pricingSectionDesc: "When you move, Cleava ensures your space is spotless and inviting. Our expert touch guarantees a fresh start or a graceful farewell, leaving your home impeccably clean for the next chapter.",
+            pricingSectionDesc:
+                "When you move, Cleava ensures your space is spotless and inviting. Our expert touch guarantees a fresh start or a graceful farewell, leaving your home impeccably clean for the next chapter.",
         },
         officeCleaning: {
             heroTitle: "Office Cleaning Helsinki & Espoo",
@@ -700,9 +743,12 @@ export const allLanguages = {
                     desc: "Emptying trash bins and maintaining recycling systems to keep the office clean and environmentally responsible.",
                 },
             ],
-            pricingTitle: "Ready to elevate your workplace? Request a quote for office cleaning today!",
-            pricingSubtitle: "A clean and fresh office boosts focus, motivation, and comfort. Regular cleaning reduces illness and promotes employee well-being — an investment that pays off every single day.",
-            pricingSubtitle1: "Let Manoela create a workspace where productivity and positivity thrive!",
+            pricingTitle:
+                "Ready to elevate your workplace? Request a quote for office cleaning today!",
+            pricingSubtitle:
+                "A clean and fresh office boosts focus, motivation, and comfort. Regular cleaning reduces illness and promotes employee well-being — an investment that pays off every single day.",
+            pricingSubtitle1:
+                "Let Manoela create a workspace where productivity and positivity thrive!",
             pricePlans: [
                 {
                     title: "Flexible Weekly Cleaning Packages",
@@ -730,7 +776,8 @@ export const allLanguages = {
                 },
             ],
             faqTitle: "You ask, we answer",
-            faqDescription: "Our goal is to ensure you feel confident in choosing us for a cleaner, healthier environment.",
+            faqDescription:
+                "Our goal is to ensure you feel confident in choosing us for a cleaner, healthier environment.",
             contactus: "CONTACT US",
             faqs: [
                 {
@@ -756,21 +803,65 @@ export const allLanguages = {
             ],
         },
         menuTitle: "Services",
-        homeCleaning: "Home Cleaning",
-        movingCleaning: "Moving Cleaning",
-        officeCleaning: "Office Cleaning",
+        homeCleaningText: "Home Cleaning",
+        movingCleaningText: "Moving Cleaning",
+        officeCleaningText: "Office Cleaning",
+        contactPage: {
+            title: "Contact Us",
+            subtitle:
+                "Please fill out the form carefully so that we can help you as efficiently as possible. Fields marked with an asterisk (*) are required.",
+            companyName: "CLEAVA",
+            fields: {
+                firstName: "First name",
+                lastName: "Last name",
+                email: "Email",
+                phone: "Mobile phone number",
+                selectService: "Select service",
+                message: "Message",
+            },
+            options: {
+                consultation: "Consultation",
+                support: "Support",
+                other: "Other",
+                choose: "Choose",
+            },
+            privacyText1:
+                "Cleava is committed to protecting and respecting your privacy, and we use your personal information to manage your account and to provide the services and products you have ordered. From time to time, we would like to contact you regarding the products and services you have used and other topics that may interest you.",
+            privacyText2:
+                "If you agree to these communications, please tick the options below.",
+            checkboxes: {
+                communication: "I accept communications from Cleava.",
+                dataConsent:
+                    "I agree and allow Cleava to store and process my personal data.",
+            },
+            recaptcha: "reCAPTCHA placeholder",
+            submitButton: "Send",
+        },
     },
 };
 export const useTranslation = () => {
     const reduxLanguage = useSelector((s) => s?.language ?? "fi");
-    const t = (path) => {
+
+
+    const t = (path, options = {}) => {
+
         const keys = path.split(".");
         let value = allLanguages?.[reduxLanguage];
+
+
         for (const key of keys) {
             value = value?.[key];
-            if (!value) return path;
+            if (value === undefined) return path;
         }
+
+
+        if (options.returnObjects && typeof value === "object") {
+            return value;
+        }
+
+
         return value;
     };
+
     return { t };
 };

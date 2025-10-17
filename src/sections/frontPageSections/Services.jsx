@@ -1,6 +1,8 @@
 import { useTranslation } from "../../../languages";
+
 const Services = () => {
   const { t } = useTranslation();
+
   const services = [
     {
       title: t("homePage.service1Title"),
@@ -21,25 +23,34 @@ const Services = () => {
       description: t("homePage.service3Desc"),
     },
   ];
+
   return (
-    <section className="h-screen py-16 relative mb-24">
-      <div className="container mx-auto px-12">
-        <h2 className="text-5xl font-[parkside] italic text-center mb-12 w-1/2 mx-auto">
+    <section className="py-12 sm:py-16 lg:py-24 relative mb-16 lg:mb-8">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-12">
+        {/* Section Title */}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-[parkside] italic text-center mb-8 sm:mb-12 w-full md:w-2/3 lg:w-1/2 mx-auto">
           {t("homePage.ourServices")}
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-8 md:gap-10">
           {services.map((service, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="relative flex flex-col items-center">
+              {/* Service Image */}
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-[100%] object-cover"
+                className="w-full h-[220px] sm:h-[280px] md:h-[340px] lg:h-[400px] object-cover"
               />
-              <div className="p-8 bg-primary absolute text-center mx-8 top-[70%]">
-                <h3 className="text-2xl font-medium font-serif italic mb-3">
+
+              {/* Service Info Box */}
+              <div className="bg-primary text-center px-4 sm:px-6 md:px-8 py-6 sm:py-8 -mt-8 sm:-mt-10 md:-mt-12 lg:-mt-16 w-[90%] sm:w-[85%] md:w-[80%]  h-[200px] md:h-[280px] shadow-md">
+                <h3 className="text-xl sm:text-2xl font-medium font-serif italic mb-2 sm:mb-3">
                   {service.title}
                 </h3>
-                <p className="text-md leading-relaxed">{service.description}</p>
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-black/80">
+                  {service.description}
+                </p>
               </div>
             </div>
           ))}
@@ -48,4 +59,5 @@ const Services = () => {
     </section>
   );
 };
+
 export default Services;

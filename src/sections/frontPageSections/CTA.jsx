@@ -1,21 +1,42 @@
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "../../../languages";
+
 const CTA = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleContact = () => {
+    navigate("/contact-us");
+  };
+
+  const title = t("homePage")?.ctaSection?.title || "";
+  const [before, after] = title.split("Olemme");
+
   return (
-    <section className="py-16 bg-[#f5f5f5]">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-5xl font-serif italic text-gray-800 mb-4 leading-[60px]">
-          {t("homePage")?.ctaSection?.title?.split("Olemme")[0]} <br />
-          Olemme {t("homePage")?.ctaSection?.title?.split("Olemme")[1]}
+    <section className="py-12 sm:py-16 lg:py-24 bg-[#f5f5f5]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12 text-center">
+        {/* Title */}
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif italic text-gray-800 mb-4 leading-tight sm:leading-snug lg:leading-[60px]">
+          {before}
+          <br className="hidden sm:block" />
+          <span className="text-[#023666] font-semibold"> {after}</span>
         </h2>
-        <p className="text-center max-w-2xl mx-auto mb-8 leading-relaxed">
+
+        {/* Description */}
+        <p className="text-gray-700 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-2">
           {t("homePage")?.ctaSection?.description}
         </p>
-        <button className="border-b-2 border-b-[#023666]">
+
+        {/* Button */}
+        <button
+          className="border-b-2 border-b-[#023666] text-[#023666] text-sm sm:text-base font-medium cursor-pointer hover:opacity-80 transition"
+          onClick={handleContact}
+        >
           {t("homePage")?.ctaSection?.button}
         </button>
       </div>
     </section>
   );
 };
+
 export default CTA;

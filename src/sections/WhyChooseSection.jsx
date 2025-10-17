@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 const WhyChooseSection = ({
   title,
   desc1,
@@ -9,6 +10,10 @@ const WhyChooseSection = ({
   leftTitle,
   rightTitle,
 }) => {
+  const navigate = useNavigate();
+  const handleContact = () => {
+    navigate("/contact-us");
+  };
   return (
     <>
       <section className="py-20 px-6 relative ">
@@ -19,7 +24,10 @@ const WhyChooseSection = ({
             </h2>
             <p className=" leading-relaxed mb-6">{desc1}</p>
             <p className=" font-bold leading-relaxed mb-6">{desc2}</p>
-            <button className="bg-[#002350] rounded-full text-white px-6 py-2 ">
+            <button
+              className="bg-[#002350] rounded-full text-white px-6 py-2 "
+              onClick={handleContact}
+            >
               OTA YHTEYTTÄ
             </button>
           </div>

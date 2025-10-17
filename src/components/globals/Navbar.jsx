@@ -1,26 +1,35 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import logo from "../../assets/images/logo.jpg";
 import ServiceDropdown from "../dropdown/ServiceDropdown";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useTranslation } from "../../../languages";
+
 const Navbar = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleContact = () => {
-    window.open(
-      "https://share-eu1.hsforms.com/1MiJZ4Ra2QaG6-egWolPdzA2e0xr3?__hstc=253726550.3acd6dad8646f957a81a34364f4f3516.1760348459763.1760348459763.1760353918422.2&__hssc=253726550.12.1760353918422&__hsfp=2111929243"
-    );
+    navigate("/contact-us");
+    setMenuOpen(false);
   };
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
-    <header className="bg-[#f2f2f2] fixed w-full top-0 left-0 z-100">
-      <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
+    <header className="bg-[#f2f2f2] fixed w-full top-0 left-0 z-50 shadow-sm">
+      <nav className="container mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-2xl font-serif">
-          <img src={logo} className="h-12 w-full" alt="Cleava logo" />
-        </div>
-        {/* Nav Links */}
-        <div className="hidden md:flex items-center justify-center space-x-8 text-md font-medium">
+        <Link to="/" className="flex items-center space-x-2">
+          <img src={logo} className="h-12 w-auto" alt="Cleava logo" />
+        </Link>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-8 text-md font-medium">
           <Link
-            to="."
+            to="/"
             className="text-black hover:border-b-2 hover:border-b-[#002350]"
           >
             {t("navbar.home")}
@@ -40,14 +49,60 @@ const Navbar = () => {
           </Link>
           <LanguageSwitcher />
           <button
-            className="bg-[#002350] rounded-full text-white px-6 py-2"
+            className="bg-[#002350] rounded-full text-white px-6 py-2 hover:bg-[#001a3a]"
             onClick={handleContact}
           >
             {t("navbar.contact")}
           </button>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-[#002350] focus:outline-none"
+          onClick={toggleMenu}
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </nav>
+
+      {/* Mobile Dropdown Menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-[#f2f2f2] shadow-inner border-t border-gray-200">
+          <div className="flex flex-col items-start px-6 py-4 space-y-4 text-md font-medium">
+            <Link
+              to="/"
+              className="w-full text-black hover:text-[#002350]"
+              onClick={() => setMenuOpen(false)}
+            >
+              {t("navbar.home")}
+            </Link>
+            <ServiceDropdown mobile />
+            <Link
+              to="/story"
+              className="w-full text-black hover:text-[#002350]"
+              onClick={() => setMenuOpen(false)}
+            >
+              {t("navbar.story")}
+            </Link>
+            <Link
+              to="/blogs"
+              className="w-full text-black hover:text-[#002350]"
+              onClick={() => setMenuOpen(false)}
+            >
+              {t("navbar.blog")}
+            </Link>
+            <LanguageSwitcher />
+            <button
+              className="bg-[#002350] w-full rounded-full text-white px-6 py-2 hover:bg-[#001a3a]"
+              onClick={handleContact}
+            >
+              {t("navbar.contact")}
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
+
 export default Navbar;

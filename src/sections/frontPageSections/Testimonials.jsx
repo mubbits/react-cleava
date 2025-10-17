@@ -3,116 +3,130 @@ import { FaStar } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import google from "../../assets/images/google.svg";
 import { useTranslation } from "../../../languages";
+
 export default function Testimonials() {
   const { t } = useTranslation();
-  const [index, setIndex] = useState(0);
-  const next = () =>
-    setIndex(
-      (prev) =>
-        (prev + 1) %
-        t("homePage.testimonials.reviews", { returnObjects: true }).length
-    );
-  const prev = () =>
-    setIndex(
-      (prev) =>
-        (prev -
-          1 +
-          t("homePage.testimonials.reviews", { returnObjects: true }).length) %
-        t("homePage.testimonials.reviews", { returnObjects: true }).length
-    );
   const reviews = t("homePage.testimonials.reviews", { returnObjects: true });
+
+  const [index, setIndex] = useState(0);
+  const visibleCount = 4; // how many reviews to show at once on desktop
+
+  const next = () => setIndex((prev) => (prev + 1) % reviews.length);
+  const prev = () =>
+    setIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
+
+  // Calculate visible reviews (simple circular carousel)
+  const visibleReviews = reviews
+    .slice(index, index + visibleCount)
+    .concat(
+      reviews.slice(0, Math.max(0, index + visibleCount - reviews.length))
+    );
+
   return (
-    <div className="h-screen pt-24">
-      <div className="flex flex-col items-center">
-        <p className="text-center uppercase mb-2 text-[#023666]">
+    <section className="min-h-screen bg-white py-20 sm:py-24">
+      {/* Header Section */}
+      <div className="flex flex-col items-center text-center px-4 mb-12">
+        <p className="uppercase text-[#023666] text-sm sm:text-base mb-2 tracking-wider">
           {t("homePage.testimonials.topText")}
         </p>
-        <h2 className="text-5xl font-serif italic text-center text-gray-800 mb-4">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif italic text-gray-800 mb-4 leading-tight">
           {t("homePage.testimonials.title")}
         </h2>
-        <p className="text-center font-medium mb-8 ">
+        <p className="text-gray-600 text-sm sm:text-base max-w-xl mb-6">
           {t("homePage.testimonials.quote")}
         </p>
-        <button className="border-b-2 border-b-[#023666]">
+        <button className="border-b-2 border-b-[#023666] text-[#023666] text-sm sm:text-base font-medium hover:opacity-80 transition">
           {t("homePage.testimonials.button")}
         </button>
       </div>
-      <div className="w-full flex flex-col md:flex-row justify-center items-center gap-8 p-6 md:p-12 bg-white">
+
+      {/* Testimonials Section */}
+      <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-4 sm:px-8 md:px-12">
         {/* Left Summary */}
-        <div className="flex flex-col justify-center text-center w-full md:w-1/4">
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+        <div className="flex flex-col justify-center text-center w-full md:w-1/4 bg-white">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
             {t("homePage.testimonials.summaryTitle")}
           </h3>
           <div className="flex justify-center mb-2">
             {[...Array(5)].map((_, i) => (
-              <FaStar key={i} className="text-yellow-400 text-3xl" />
+              <FaStar
+                key={i}
+                className="text-yellow-400 text-2xl sm:text-3xl"
+              />
             ))}
           </div>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-sm sm:text-base">
             {t("homePage.testimonials.basedOn")}{" "}
-            <span className="font-bold">
+            <span className="font-semibold">
               {t("homePage.testimonials.reviewsCount")}
             </span>
           </p>
-          <div className="flex justify-center mt-2">
-            <img src={google} className="h-10 w-auto text-[#4285F4]" />
+          <div className="flex justify-center mt-3">
+            <img src={google} alt="Google" className="h-8 sm:h-10 w-auto" />
           </div>
         </div>
-        {/* Reviews Grid */}
-        <div className="relative w-full md:w-3/4 overflow-hidden">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {reviews.map((r, i) => (
+
+        {/* Reviews Carousel */}
+        <div className="relative w-full md:w-3/4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 transition-transform duration-500">
+            {visibleReviews.map((r, i) => (
               <div
-                key={i}
-                className="bg-white py-5 px-2 border border-gray-100"
+                key={`${r.name}-${i}`}
+                className="bg-white border border-gray-200 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="flex items-start gap-2 mb-2">
-                  <div className="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center font-semibold text-lg">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-[#023666] text-white flex items-center justify-center font-semibold text-lg">
                     {r.name.charAt(0)}
                   </div>
                   <div>
-                    <p className="text-md">{r.name}</p>
+                    <p className="text-sm sm:text-base font-medium">{r.name}</p>
                     <p className="text-xs text-gray-500">{r.date}</p>
                   </div>
                   <img
                     src="https://cdn.trustindex.io/assets/platform/Google/icon.svg"
-                    className="ml-auto text-[#4285F4] size-6"
+                    className="ml-auto size-5 sm:size-6"
+                    alt="Google icon"
                   />
                 </div>
-                <div className="flex gap-2 items-center text-yellow-400 mb-2">
-                  <div className="flex">
-                    {[...Array(r.rating)].map((_, i) => (
-                      <FaStar size={20} key={i} />
-                    ))}
-                  </div>
-                  <span className="text-blue-500">
-                    <img
-                      src="https://cdn.trustindex.io/assets/icon/ti-verified.svg"
-                      className="size-4"
+
+                <div className="flex items-center gap-1 mb-2">
+                  {[...Array(r.rating)].map((_, j) => (
+                    <FaStar
+                      key={j}
+                      className="text-yellow-400 text-lg sm:text-xl"
                     />
-                  </span>
+                  ))}
+                  <img
+                    src="https://cdn.trustindex.io/assets/icon/ti-verified.svg"
+                    className="ml-1 size-4"
+                    alt="Verified"
+                  />
                 </div>
-                <p className="text-gray-700 text-sm">{r.review}</p>
-                <button className="text-sm text-gray-500 mt-2">
+
+                <p className="text-gray-700 text-sm sm:text-base line-clamp-5">
+                  {r.review}
+                </p>
+                <button className="text-xs sm:text-sm text-gray-500 mt-2 hover:text-gray-700 transition">
                   {t("homePage.testimonials.readMore")}
                 </button>
               </div>
             ))}
           </div>
+
           <button
             onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg p-2 rounded-full hover:bg-gray-100"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full hover:bg-gray-100 transition"
           >
-            <IoIosArrowBack className="text-xl" />
+            <IoIosArrowBack className="text-lg sm:text-xl" />
           </button>
           <button
             onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg p-2 rounded-full hover:bg-gray-100"
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full hover:bg-gray-100 transition"
           >
-            <IoIosArrowForward className="text-xl" />
+            <IoIosArrowForward className="text-lg sm:text-xl" />
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

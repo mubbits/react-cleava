@@ -1,8 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../redux/action";
+import { useEffect, useState } from "react";
 export default function LanguageSwitcher() {
   const dispatch = useDispatch();
+  const [lang, setLang] = useState("fi");
   const { language } = useSelector((state) => state);
+
+  useEffect(() => {
+    if (language !== undefined) {
+      setLang(language ?? "fi");
+    } else {
+      dispatch(setLanguage("fi"));
+    }
+  }, [language]);
   return (
     <div className="flex gap-2 items-center">
       <button

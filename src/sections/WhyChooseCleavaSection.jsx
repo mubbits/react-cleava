@@ -1,39 +1,67 @@
 import { Check } from "lucide-react";
 import React from "react";
 import { useTranslation } from "../../languages";
-const WhyChooseCleavaSection = ({ choosingSectionData, header }) => {
+import { useNavigate } from "react-router-dom";
+
+const WhyChooseCleavaSection = ({
+  choosingSectionData = [],
+  header = true,
+}) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleContact = () => {
+    navigate("/contact-us");
+  };
+
   return (
-    <div className="h-screen  py-16 mt-20">
-      {header === false ? (
-        ""
-      ) : (
-        <div className="max-w-7xl mx-auto flex flex-col items-center justify-center space-y-6">
-          <h2 className="font-serif italic text-center text-5xl mb-8">
+    <section className="relative py-16 mt-12   px-4 sm:px-8 md:px-0 lg:px-0 bg-white">
+      {/* ===== Header Section ===== */}
+      {header && (
+        <div className="max-w-6xl mx-auto flex flex-col items-center justify-center text-center mb-16 space-y-6">
+          <h2 className="font-serif italic text-3xl sm:text-4xl md:text-5xl font-semibold text-[#002350] leading-tight">
             {t("homeCleaning.homeCleaningSectionTitle")}
           </h2>
-          <p className="font-medium text-xl text-center max-w-4xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl leading-relaxed">
             {t("homeCleaning.homeCleaningSectionDesc")}
           </p>
-          <button className="border-b-2 border-b-[#023666]">
+          <button
+            onClick={handleContact}
+            className="mt-2 border-b-2 border-b-[#023666] text-[#023666] hover:opacity-80 transition-all duration-200 text-lg"
+          >
             OTA YHTEYTTÄ
           </button>
         </div>
       )}
-      <div className="flex flex-wrap justify-between items-start bg-primary mx-8 my-12">
-        {choosingSectionData?.map((data, index) => {
-          return (
-            <div className="p-6 w-[30%]">
-              <div className="size-16 font-bold bg-white rounded-full flex items-center justify-center mb-6">
-                <Check size={30} />
+
+      {/* ===== Cards Section ===== */}
+      <div className="bg-primary  py-10 px-4 sm:px-8 md:px-12 max-w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {Array.isArray(choosingSectionData) &&
+        choosingSectionData.length > 0 ? (
+          choosingSectionData.map((data, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-start text-black bg-white/60 rounded-xl p-6 hover:bg-white transition-all duration-300"
+            >
+              <div className="size-14 sm:size-16 bg-white text-[#002350] rounded-full flex items-center justify-center mb-4 shadow-md">
+                <Check size={28} />
               </div>
-              <p className="text-2xl mb-6 font-serif italic">{data?.title}</p>
-              <p className="text-md">{data?.desc}</p>
+              <h3 className="text-xl sm:text-2xl font-serif italic mb-4">
+                {data?.title}
+              </h3>
+              <p className="text-base sm:text-lg text-gray-800 leading-relaxed text-justify">
+                {data?.desc}
+              </p>
             </div>
-          );
-        })}
+          ))
+        ) : (
+          <p className="text-center text-gray-700 col-span-full">
+            No data available.
+          </p>
+        )}
       </div>
-    </div>
+    </section>
   );
 };
+
 export default WhyChooseCleavaSection;

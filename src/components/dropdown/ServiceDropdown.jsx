@@ -38,21 +38,21 @@ export default function ServiceDropdown() {
             onClick={() => setIsOpen(false)}
             className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#002350] transition"
           >
-            {t("homeCleaning")}
+            {t("homeCleaningText")}
           </Link>
           <Link
             to="/moving-cleaning"
             onClick={() => setIsOpen(false)}
             className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#002350] transition"
           >
-            {t("movingCleaning")}
+            {t("movingCleaningText")}
           </Link>
           <Link
             to="/office-cleaning"
             onClick={() => setIsOpen(false)}
             className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#002350] transition"
           >
-            {t("officeCleaning")}
+            {t("officeCleaningText")}
           </Link>
         </div>
       )}
