@@ -37,7 +37,7 @@ const WhyChooseSection = ({
           <div>
             <img
               src={
-                "https://plus.unsplash.com/premium_photo-1663011218145-c1d0c3ba3542?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2xlYW5pbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
+                "https://images.pexels.com/photos/4108712/pexels-photo-4108712.jpeg"
               }
               alt="Happy family"
               className="w-full h-auto md:h-120 object-cover relative z-10 translate-y-20 md:translate-y-10"

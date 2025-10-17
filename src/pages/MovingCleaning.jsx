@@ -30,7 +30,7 @@ export default function MovingCleaning() {
       <ServiceHeroSection
         title={t("movingCleaning.movingCleaningHero")}
         desc={t("movingCleaning.movingCleaningDesc")}
-        img="https://media.istockphoto.com/id/2190857423/photo/professional-housecleaners-in-a-home.webp?a=1&b=1&s=612x612&w=0&k=20&c=MyQGLtacKzW7gXil14U1-RFxScAAvA9Q5VwQujJB-rc="
+        img="https://images.pexels.com/photos/1109171/pexels-photo-1109171.jpeg"
       />
       <WhyChooseCleavaSection choosingSectionData={movingCleaningData} />
       <ServicePricingSection

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "../../assets/images/logo.jpg";
+import logo from "../../assets/images/logo.png";
 import ServiceDropdown from "../dropdown/ServiceDropdown";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useTranslation } from "../../../languages";
@@ -19,14 +19,12 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="bg-[#f2f2f2] fixed w-full top-0 left-0 z-50 shadow-sm">
+    <header className="bg-white fixed  w-full top-0 left-0 z-50 shadow-sm">
       <nav className="container mx-auto px-6 py-3 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <img src={logo} className="h-12 w-auto" alt="Cleava logo" />
+          <img src={logo} className="h-auto w-20" alt="Cleava logo" />
         </Link>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8 text-md font-medium">
           <Link
             to="/"
@@ -56,7 +54,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-[#002350] focus:outline-none"
           onClick={toggleMenu}
@@ -65,7 +62,6 @@ const Navbar = () => {
         </button>
       </nav>
 
-      {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="md:hidden bg-[#f2f2f2] shadow-inner border-t border-gray-200">
           <div className="flex flex-col items-start px-6 py-4 space-y-4 text-md font-medium">

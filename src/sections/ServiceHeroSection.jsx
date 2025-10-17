@@ -2,14 +2,14 @@ import hero from "../assets/images/home/hero.webp";
 const ServiceHeroSection = ({ title, desc, img }) => (
   <section className="h-auto md:h-screen  pt-[40px]">
     <div className="block md:flex justify-center md:justify-end relative">
-      <div className="w-full md:absolute z-10 top-[20%]">
+      <div className="w-full ">
         <img
           src={img}
           alt="Happy family"
-          className="w-full md:w-auto h-auto md:h-[500px] "
+          className="w-full md:w-auto h-full md:h-screen object-cover"
         />
       </div>
-      <div className="max-w-full md:max-w-[70vw] w-full bg-primary py-24 px-4 md:px-0 flex flex-col   space-y-12 md:pl-[350px] relative">
+      <div className=" w-full bg-primary py-24 px-4 md:px-0 flex items-center justify-center flex-col   space-y-12 relative">
         <div className="max-w-full md:w-[700px]">
           <h1 className="text-2xl md:text-6xl font-serif italic text-black mb-8">
             {title}
