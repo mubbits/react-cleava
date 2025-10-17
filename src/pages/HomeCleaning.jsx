@@ -7,12 +7,11 @@ import WhyChooseSection from "../sections/WhyChooseSection";
 
 export default function HomeCleaning() {
   const { t } = useTranslation();
-  console.log("✌️t --->", t);
 
   const hc = t("homeCleaning");
 
   const cleaningSectionsData = hc?.homeCleaningSections;
-  console.log("✌️cleaningSectionsData --->", cleaningSectionsData);
+
   const pricingPlans = hc?.pricePlans;
 
   const service = {
