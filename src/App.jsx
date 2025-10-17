@@ -10,9 +10,18 @@ import MovingCleaning from "./pages/MovingCleaning";
 import OfficeCleaning from "./pages/OfficeCleaning";
 import Contactus from "./pages/Contactus";
 import BlogsDetail from "./pages/BlogsDetail";
+import { FaWhatsapp } from "react-icons/fa";
 function App() {
   return (
     <>
+      <a
+        href="https://wa.me/+358451878083"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed right-5 bottom-5 text-green-700 font-bold z-100 shadow-lg rounded-full hover:scale-105 transition-transform cursor-pointer p-2 bg-white"
+      >
+        <FaWhatsapp size={40} />
+      </a>
       <Navbar />
       <Routes>
         <Route path="/" element={<FrontPage />} />
