@@ -6,6 +6,7 @@ import ServicePricingSection from "../sections/ServicePricingSection";
 import ServiceTransitionSection from "../sections/ServiceTransitionSection";
 import WhyChooseCleavaSection from "../sections/WhyChooseCleavaSection";
 import { useTranslation } from "../../languages";
+import { useEffect } from "react";
 export default function MovingCleaning() {
   const { t } = useTranslation();
   const valuesss = t("movingCleaning.values", {
@@ -25,12 +26,15 @@ export default function MovingCleaning() {
     },
     pricePlans: pricePlans,
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <ServiceHeroSection
         title={t("movingCleaning.movingCleaningHero")}
         desc={t("movingCleaning.movingCleaningDesc")}
-        img="https://images.pexels.com/photos/1109171/pexels-photo-1109171.jpeg"
+        img="https://images.unsplash.com/photo-1591528287637-f3d5eaa83a3c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bW92aW5nJTIwb3V0JTIwY2xlYW5pbmclMjBIRHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
       />
       <WhyChooseCleavaSection choosingSectionData={movingCleaningData} />
       <ServicePricingSection

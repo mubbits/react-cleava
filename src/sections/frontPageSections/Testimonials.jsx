@@ -35,9 +35,14 @@ export default function Testimonials() {
         <p className="text-gray-600 text-sm sm:text-base max-w-xl mb-6">
           {t("homePage.testimonials.quote")}
         </p>
-        <button className="border-b-2 border-b-[#023666] text-[#023666] text-sm sm:text-base font-medium hover:opacity-80 transition">
+        <a
+          href="https://wa.me/+358451878083"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border-b-2 border-b-[#023666] text-[#023666] text-sm sm:text-base font-medium hover:opacity-80 transition"
+        >
           {t("homePage.testimonials.button")}
-        </button>
+        </a>
       </div>
 
       {/* Testimonials Section */}

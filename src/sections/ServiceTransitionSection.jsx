@@ -21,12 +21,14 @@ const ServiceTransitionSection = () => {
           </p>
 
           <div>
-            <button
-              onClick={handleContact}
+            <a
+              href="https://wa.me/+358451878083"
+              target="_blank"
+              rel="noopener noreferrer"
               className="border-b-2 border-b-[#023666] text-[#023666] text-base sm:text-lg font-medium hover:text-[#001c3c] transition-all duration-300"
             >
               {t("movingCleaning.serviceTransitionSection.contactus")}
-            </button>
+            </a>
           </div>
         </div>
 

@@ -25,12 +25,14 @@ const WhyChooseCleavaSection = ({
           <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl leading-relaxed">
             {t("homeCleaning.homeCleaningSectionDesc")}
           </p>
-          <button
-            onClick={handleContact}
-            className="mt-2 border-b-2 border-b-[#023666] text-[#023666] hover:opacity-80 transition-all duration-200 text-lg"
+          <a
+            href="https://wa.me/+358451878083"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#002350] rounded-full text-white px-6 py-2 mb-8 text-base sm:text-lg hover:bg-[#001c3c] transition-all duration-300"
           >
             OTA YHTEYTTÄ
-          </button>
+          </a>
         </div>
       )}
 

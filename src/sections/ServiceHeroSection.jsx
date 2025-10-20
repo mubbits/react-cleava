@@ -1,28 +1,42 @@
+import { useTranslation } from "../../languages";
 import hero from "../assets/images/home/hero.webp";
-const ServiceHeroSection = ({ title, desc, img }) => (
-  <section className="h-auto md:h-screen  pt-[40px]">
-    <div className="block md:flex justify-center md:justify-end relative">
-      <div className="w-full ">
+
+const ServiceHeroSection = ({ title, desc, img }) => {
+  const { t } = useTranslation();
+  return (
+    <section className="relative flex flex-col md:flex-row min-h-screen pt-16">
+      <div className="w-full md:w-1/2 h-[300px] md:h-auto">
         <img
-          src={img}
-          alt="Happy family"
-          className="w-full md:w-auto h-full md:h-screen object-cover"
+          src={img || hero}
+          alt="Service illustration"
+          className="w-full h-full object-cover"
         />
       </div>
-      <div className=" w-full bg-primary py-24 px-4 md:px-0 flex items-center justify-center flex-col   space-y-12 relative">
-        <div className="max-w-full md:w-[700px]">
-          <h1 className="text-2xl md:text-6xl font-serif italic text-black mb-8">
+
+      <div className="w-full md:w-1/2 bg-primary flex items-center justify-center p-8 md:p-16 lg:p-16">
+        <div className="max-w-xl text-center md:text-left space-y-6">
+          <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-5xl font-serif italic text-black leading-tight">
             {title}
           </h1>
-          <div className="w-full md:w-150 mb-8">{desc}</div>
+
+          <p className="text-base sm:text-lg text-justify leading-relaxed">
+            {desc}
+          </p>
+
           <div>
-            <button className="border-b-2 border-b-[#023666]">
-              CONTACT US
-            </button>
+            <a
+              href="https://wa.me/+358451878083"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 border-b-2 border-[#023666] text-black hover:text-[#023666] transition-colors duration-300"
+            >
+              {t("navbar.contact")}
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
+
 export default ServiceHeroSection;

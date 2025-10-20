@@ -28,12 +28,14 @@ const CTA = () => {
         </p>
 
         {/* Button */}
-        <button
+        <a
           className="border-b-2 border-b-[#023666] text-[#023666] text-sm sm:text-base font-medium cursor-pointer hover:opacity-80 transition"
-          onClick={handleContact}
+          href="https://wa.me/+358451878083"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {t("homePage")?.ctaSection?.button}
-        </button>
+        </a>
       </div>
     </section>
   );

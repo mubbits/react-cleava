@@ -6,6 +6,7 @@ import ServiceHeroSection from "../sections/ServiceHeroSection";
 import ServicePricingSection from "../sections/ServicePricingSection";
 import WhyChooseCleavaSection from "../sections/WhyChooseCleavaSection";
 import FaqSection from "../sections/FaqSection";
+import { useEffect } from "react";
 export default function OfficeCleaning() {
   const { t } = useTranslation();
   const sectionServices = t("officeCleaning.officeCleaningServices", {
@@ -25,13 +26,16 @@ export default function OfficeCleaning() {
     },
     pricePlans: pricePlans,
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <ServiceHeroSection
         title={t("officeCleaning.heroTitle")}
         desc={t("officeCleaning.heroDesc")}
         img={
-          "https://images.unsplash.com/photo-1571624436279-b272aff752b5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b2ZmaWNlJTIwY2xlYW5pbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
+          "https://images.unsplash.com/photo-1627905646269-7f034dcc5738?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2ZmaWNlJTIwY2xlYW5pbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
         }
       />
       <WhyChooseCleavaSection

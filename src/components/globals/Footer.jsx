@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { useTranslation } from "../../../languages";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -15,7 +16,9 @@ const Footer = () => {
               {t("homePage.footer")?.contactTitle}
             </h3>
             <p className="text-sm md:text-lg">{t("homePage.footer")?.phone}</p>
-            <p className="text-sm md:text-lg">{t("homePage.footer")?.email}</p>
+            <p className="text-sm md:text-lg font-bold">
+              {t("homePage.footer")?.email}
+            </p>
             <p className="text-sm md:text-lg">
               {t("homePage.footer")?.address}
             </p>
@@ -44,20 +47,21 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="font-semibold text-xl md:text-2xl mb-3 md:mb-4">
               {t("homePage.footer")?.servicesTitle}
             </h3>
-            <p className="text-sm md:text-lg">
-              {t("homePage.footer")?.homeCleaning}
-            </p>
-            <p className="text-sm md:text-lg">
-              {t("homePage.footer")?.officeCleaning}
-            </p>
-            <p className="text-sm md:text-lg">
-              {t("homePage.footer")?.moveCleaning}
-            </p>
+            <div className="flex flex-col space-y-3">
+              <Link to={"/home-cleaning"} className="text-sm md:text-lg">
+                {t("homePage.footer")?.homeCleaning}
+              </Link>
+              <Link to={"/moving-cleaning"} className="text-sm md:text-lg">
+                {t("homePage.footer")?.officeCleaning}
+              </Link>
+              <Link to={"/office-cleaning"} className="text-sm md:text-lg">
+                {t("homePage.footer")?.moveCleaning}
+              </Link>
+            </div>
           </div>
         </div>
 

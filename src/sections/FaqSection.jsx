@@ -19,9 +19,14 @@ const FaqSection = () => {
           {t("officeCleaning.faqDescription")}
         </p>
 
-        <button className="border-b-2 border-[#023666] text-[#023666] hover:text-[#001c3c] text-base sm:text-lg font-medium transition-all duration-300 mb-12">
+        <a
+          href="https://wa.me/+358451878083"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border-b-2 border-[#023666] text-[#023666] hover:text-[#001c3c] text-base sm:text-lg font-medium transition-all duration-300 mb-12"
+        >
           {t("officeCleaning.contactus")}
-        </button>
+        </a>
 
         {/* ===== FAQ Accordion ===== */}
         <div className="max-w-3xl mx-auto text-left space-y-4">

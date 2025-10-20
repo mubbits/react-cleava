@@ -2,6 +2,7 @@ import { useTranslation } from "../../languages";
 import Testimonials from "../sections/frontPageSections/Testimonials";
 import hero from "../assets/images/home/hero.webp";
 import { useNavigate } from "react-router-dom";
+import storyImage from "../assets/images/story/story.jpg";
 export default function Story() {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -16,12 +17,14 @@ export default function Story() {
           <h1 className="text-2xl md:text-5xl font-serif italic leading-tight mb-8">
             {t("storyPage")?.hero?.title}
           </h1>
-          <button
+          <a
             className="border-b-2 border-b-[#023666]"
-            onClick={handleContact}
+            href="https://wa.me/+358451878083"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {t("storyPage")?.hero?.button}
-          </button>
+          </a>
         </div>
       </section>
       {/* STORY IMAGE + TEXT */}
@@ -58,12 +61,14 @@ export default function Story() {
             </p>
           ))}
 
-          <button
-            onClick={handleContact}
+          <a
+            href="https://wa.me/+358451878083"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#002350] rounded-full text-white px-6 py-2 mt-4 hover:bg-[#001a3a] transition"
           >
             {t("storyPage")?.hero?.button}
-          </button>
+          </a>
         </div>
       </section>
 
@@ -80,16 +85,18 @@ export default function Story() {
             <p className="font-bold leading-relaxed mb-3 md:mb-6">
               {t("storyPage")?.section2?.paragraph2}
             </p>
-            <button
+            <a
               className="bg-[#002350] rounded-full text-white px-6 py-2"
-              onClick={handleContact}
+              href="https://wa.me/+358451878083"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {t("storyPage")?.section2?.button}
-            </button>
+            </a>
           </div>
           <div>
             <img
-              src={hero}
+              src={storyImage}
               alt="Happy family"
               className="w-full h-auto md:h-120 object-cover relative z-10 translate-y-20 md:translate-y-10"
             />

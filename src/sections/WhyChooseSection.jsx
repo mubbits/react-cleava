@@ -27,12 +27,14 @@ const WhyChooseSection = ({
             </h2>
             <p className="leading-relaxed mb-3 md:mb-6">{desc1}</p>
             <p className="font-bold leading-relaxed mb-3 md:mb-6">{desc2}</p>
-            <button
+            <a
               className="bg-[#002350] rounded-full text-white px-6 py-2"
-              onClick={handleContact}
+              href="https://wa.me/+358451878083"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {t("storyPage")?.section2?.button}
-            </button>
+            </a>
           </div>
           <div>
             <img

@@ -1,10 +1,11 @@
+import { useEffect } from "react";
 import { useTranslation } from "../../languages";
 import Testimonials from "../sections/frontPageSections/Testimonials";
 import ServiceHeroSection from "../sections/ServiceHeroSection";
 import ServicePricingSection from "../sections/ServicePricingSection";
 import WhyChooseCleavaSection from "../sections/WhyChooseCleavaSection";
 import WhyChooseSection from "../sections/WhyChooseSection";
-
+import homeCleaning from "../assets/images/homeCleaning.jpg";
 export default function HomeCleaning() {
   const { t } = useTranslation();
 
@@ -27,12 +28,17 @@ export default function HomeCleaning() {
   if (!cleaningSectionsData)
     console.warn("⚠️ Missing 'homeCleaningSections' in language file");
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <ServiceHeroSection
         title={hc?.heroTitle}
         desc={hc?.desc}
-        img="https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg"
+        img={
+          "https://images.unsplash.com/photo-1686178827149-6d55c72d81df?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2xlYW5pbmclMjBIb21lfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600"
+        }
       />
 
       <WhyChooseCleavaSection choosingSectionData={cleaningSectionsData} />

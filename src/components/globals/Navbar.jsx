@@ -46,12 +46,14 @@ const Navbar = () => {
             {t("navbar.blog")}
           </Link>
           <LanguageSwitcher />
-          <button
+          <a
             className="bg-[#002350] rounded-full text-white px-6 py-2 hover:bg-[#001a3a]"
-            onClick={handleContact}
+            href="https://wa.me/+358451878083"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {t("navbar.contact")}
-          </button>
+          </a>
         </div>
 
         <button
@@ -88,12 +90,14 @@ const Navbar = () => {
               {t("navbar.blog")}
             </Link>
             <LanguageSwitcher />
-            <button
+            <a
               className="bg-[#002350] w-full rounded-full text-white px-6 py-2 hover:bg-[#001a3a]"
-              onClick={handleContact}
+              href="https://wa.me/+358451878083"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {t("navbar.contact")}
-            </button>
+            </a>
           </div>
         </div>
       )}

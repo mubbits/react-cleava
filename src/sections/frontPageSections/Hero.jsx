@@ -1,5 +1,5 @@
 import { useTranslation } from "../../../languages";
-
+import homeHero from "../../assets/images/home/homeHero.jpg";
 const Hero = () => {
   const { t } = useTranslation();
 
@@ -24,16 +24,22 @@ const Hero = () => {
           </div>
 
           <div>
-            <button className="text-sm sm:text-base border-b-2 border-b-[#023666] text-[#023666] hover:opacity-80 transition font-medium">
+            <a
+              href="https://wa.me/+358451878083"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base border-b-2 border-b-[#023666] text-[#023666] hover:opacity-80 transition font-medium"
+            >
               {t("homePage.contactus")}
-            </button>
+            </a>
           </div>
         </div>
 
         <div className="flex justify-center h-full    ">
           <img
             src={
-              "https://images.pexels.com/photos/634007/pexels-photo-634007.jpeg"
+              homeHero
+              // "https://images.pexels.com/photos/634007/pexels-photo-634007.jpeg"
             }
             alt="Happy family"
             className=" w-[100%]  h-full object-cover"

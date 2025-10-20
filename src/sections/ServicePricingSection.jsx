@@ -47,12 +47,14 @@ const ServicePricingSection = ({ service, title, subTitle, subTitle2 }) => {
             </p>
 
             {/* Button */}
-            <button
-              onClick={handleContact}
+            <a
+              href="https://wa.me/+358451878083"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#002350] rounded-full text-white px-6 py-2 mb-8 text-base sm:text-lg hover:bg-[#001c3c] transition-all duration-300"
             >
               OTA YHTEYTTÄ
-            </button>
+            </a>
 
             {/* Footer Text */}
             <p className="text-sm sm:text-md text-gray-700 px-6 sm:px-10 pb-8 leading-relaxed italic">
