@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "../../languages"; // adjust path if needed
 import { useNavigate } from "react-router-dom";
 
@@ -39,7 +39,9 @@ export default function Blogs() {
       excerpt: t("blogsPage").blog4Excerpt,
     },
   ];
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-white pt-20 sm:pt-24">
       {/* Page Title */}

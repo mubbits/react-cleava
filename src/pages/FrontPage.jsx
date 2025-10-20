@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useTranslation } from "../../languages";
 import About from "../sections/frontPageSections/About";
 import CTA from "../sections/frontPageSections/CTA";
@@ -14,6 +15,9 @@ import Values from "../sections/frontPageSections/Values";
 export default function FrontPage() {
   const { t } = useTranslation();
   const values = t("homePage.values");
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-white">
       <Hero />

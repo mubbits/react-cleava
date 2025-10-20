@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function BlogsDetail() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="bg-gray-50 min-h-screen pt-24 pb-20">
       {/* Hero Section */}

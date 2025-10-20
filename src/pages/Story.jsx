@@ -3,12 +3,16 @@ import Testimonials from "../sections/frontPageSections/Testimonials";
 import hero from "../assets/images/home/hero.webp";
 import { useNavigate } from "react-router-dom";
 import storyImage from "../assets/images/story/story.jpg";
+import { useEffect } from "react";
 export default function Story() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const handleContact = () => {
     navigate("/contact-us");
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="bg-white">
       {/* HERO */}
