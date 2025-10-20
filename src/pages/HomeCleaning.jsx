@@ -37,7 +37,8 @@ export default function HomeCleaning() {
         title={hc?.heroTitle}
         desc={hc?.desc}
         img={
-          "https://images.unsplash.com/photo-1686178827149-6d55c72d81df?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2xlYW5pbmclMjBIb21lfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600"
+          homeCleaning
+          // "https://images.unsplash.com/photo-1686178827149-6d55c72d81df?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2xlYW5pbmclMjBIb21lfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600"
         }
       />
 
