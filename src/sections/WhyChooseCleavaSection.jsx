@@ -51,7 +51,7 @@ const WhyChooseCleavaSection = ({
               <h3 className="text-xl sm:text-2xl font-serif italic mb-4">
                 {data?.title}
               </h3>
-              <p className="text-base sm:text-lg text-gray-800 leading-relaxed text-justify">
+              <p className="text-base sm:text-lg text-gray-800 leading-relaxed ">
                 {data?.desc}
               </p>
             </div>

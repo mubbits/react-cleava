@@ -22,7 +22,7 @@ const Values = ({ values }) => {
                 <h3 className="text-xl sm:text-2xl font-serif italic mb-2 sm:mb-3 md:mb-4">
                   {value.title}
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg opacity-90 leading-relaxed text-justify">
+                <p className="text-sm sm:text-base md:text-lg opacity-90 leading-relaxed ">
                   {value.description}
                 </p>
               </div>

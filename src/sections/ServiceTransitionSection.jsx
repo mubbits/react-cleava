@@ -16,7 +16,7 @@ const ServiceTransitionSection = () => {
             {t("movingCleaning.serviceTransitionSection.title")}
           </h2>
 
-          <p className="text-base sm:text-lg md:text-xl font-medium text-gray-700 leading-relaxed text-justify md:text-left">
+          <p className="text-base sm:text-lg md:text-xl font-medium text-gray-700 leading-relaxed md:text-left">
             {t("movingCleaning.serviceTransitionSection.desc")}
           </p>
 

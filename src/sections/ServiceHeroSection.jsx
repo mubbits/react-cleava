@@ -19,9 +19,7 @@ const ServiceHeroSection = ({ title, desc, img }) => {
             {title}
           </h1>
 
-          <p className="text-base sm:text-lg text-justify leading-relaxed">
-            {desc}
-          </p>
+          <p className="text-base sm:text-lg leading-relaxed">{desc}</p>
 
           <div>
             <a
